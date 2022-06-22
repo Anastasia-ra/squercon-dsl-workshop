@@ -1,0 +1,29 @@
+plugins {
+    id 'groovy'
+    id 'application'
+}
+
+group 'at.squer'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'com.slack.api', name: 'slack-api-client', version: '1.22.3'
+    implementation 'org.codehaus.groovy:groovy-all:3.0.5'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClass = 'at.squer.dslworkshop.Main'
+}
